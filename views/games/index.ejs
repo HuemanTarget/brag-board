@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+    <div class="sidenav">
+      <a href="../">Home</a>
+      <a href="/games/new/">Create A Brag</a>
+      <a href="#Sports">Sports</a>
+      <a href="#FoodAndDrink">Food And Drink</a>
+      <a href="#HumanBody">Human Body</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="gamemain">
+      <h1><%= title %></h1>
+      <% games.forEach(g => { %>
+        <li>
+            <tr> 
+            <td><h3><%= g.game %></h3></td>
+            <td><h2><a href="/games/<%= g._id %>"><%= g.title %></a></h2></td>
+            <td><p><%= g.content %></p></td>
+            <p><%= g.date %></p>
+            <% if (g.user.toString() === user._id.toString()) { %>
+            <form action="/games/<%= g._id %>?_method=DELETE" method="POST" class="delete-form"><button type="submit">Delete Brag</button></form>
+            <% } %>
+            </tr>
+        </li>
+        <% }) %>
+    </div>
+  </body>
+</html>

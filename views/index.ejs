@@ -1,0 +1,29 @@
+<%- include('./partials/header') %>
+    
+    <% if (user) { %>
+    <div class="row">
+      <div class="columnone">
+        <h2><a href="../games">Video Games</a></h2>
+        <p>Just beat a new game or have the highest score in a match. Brag about your gaming accomplishments here!</p>
+      </div>
+      <div class="columntwo">
+        <h2><a href="#Sports">Sports</a></h2>
+        <p>Just ran your fastest mile or scored the most points in a game. Brag about your sports accomplishments here!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="columnthree">
+        <h2><a href="#FoodAndDrink">Food And Drink</a></h2>
+        <p>Just ate the most tacos or just drank a whole case of beer. Brag about your food accomplishments here!</p>
+      </div>
+      <div class="columnfour">
+        <h2><a href="#HumanBody">Human Body</a></h2>
+        <p>Think you have the longest fingernails or biggest feet. Brag about your body accomplishments here!</p>
+      </div>
+      <% } else { %>
+        <h1 class="login">Please Login To Use</h1>
+        <h1 class="login">The Brag Board</h1>
+      <% } %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+    <form id="new-form" action="/games" method="POST" >
+        <label>Game:</label>
+        <select name="game">
+            <option value="Call Of Duty">Call Of Duty</option>
+            <option value="Destiny">Destiny</option>
+            <option value="Fortnite">Fortnite</option>
+            <option value="Halo">Halo</option>
+          </select>
+        <label>Title:</label>
+        <input type="text" name="title">
+        <label>Description:</label>
+        <textarea name="content"></textarea>
+        <label>Proof:</label>
+        <input type="url" name="proof">
+        <input type="submit" value="Add Brag">
+      </form>
+      <a class="newback" href="/games">Back</a>
+  </body>
+</html>

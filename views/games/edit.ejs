@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<body>
+    <h1>Edit Brag</h1>
+    <form action="/games/edit/<%= id %>?_method=PUT" method="POST" autocomplete="off">
+        <label>Game:</label>
+            <select name="game">
+                <option value="Call Of Duty">Call Of Duty</option>
+                <option value="Destiny">Destiny</option>
+                <option value="Fortnite">Fortnite</option>
+                <option value="Halo">Halo</option>
+            </select><br>
+        <label>Title:</label>
+        <input type="text" name="title" value="<%= game.title %>"/><br>
+        <label>Content:</label>
+        <textarea name="content"><%= game.content %></textarea><br>
+        <label>Proof:</label>
+        <input type="url" name="proof" value="<%= game.proof %>"/><br>
+        <button type="submit">Update Brag</button><br>
+    </form>
+    <a href="/games/<%= id%>">Back</a>
+</body>
+
+
