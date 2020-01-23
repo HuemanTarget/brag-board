@@ -2,6 +2,7 @@
   font-family: 'Fredericka the Great', cursive, sans-serif;
 }
 
+
 .sidenav {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
@@ -178,5 +179,10 @@ table td {
 
 .login {
   text-align: center;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
