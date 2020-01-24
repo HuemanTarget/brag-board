@@ -5,13 +5,13 @@
 ```
 SCREENSHOTS:
 ```
-![Screenshot 1](https://imgur.com/gPUMV74)
+![ScreenShot](https://imgur.com/gPUMV74)
 
-![Screenshot 02](https://imgur.com/VTBLm0y)
+![ScreenShot](https://imgur.com/VTBLm0y)
 
-![Screenshot 03](https://imgur.com/JCus4cG)
+![ScreenShot](https://imgur.com/JCus4cG)
 
-![Screenshot 03](https://imgur.com/32A7fX9)
+![ScreenShot](https://imgur.com/32A7fX9)
 
 
 ```
