@@ -3,11 +3,11 @@
 
 <div class="gamemain">
     <h1><%= title %></h1>
-    <a href="/sports/new/">Create A Brag</a>
+    <h2><a href="/sports/new/">Create A Brag</a></h2>
     <% sports.forEach(s => { %>
       <li>
           <tr> 
-          <td><h3><%= s.sport %></h3></td>
+          <td><h2><%= s.sport %></h2></td>
           <td><h2><a href="/sports/<%= s._id %>"><%= s.title %></a></h2></td>
           <td><p><%= s.content %></p></td>
           <p><%= s.date %></p>

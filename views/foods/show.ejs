@@ -1,25 +1,25 @@
 <%- include('../partials/header') %>
 <%- include('../partials/sidebar') %>
     <section id="show-page">
-        <div>Game:</div>
-        <div><%= game.game %></div>
+        <div>Food:</div>
+        <div><%= food.food %></div>
         <div>User:</div>
-        <div><%= game.user[0].name %></div>
+        <div><%= food.user[0].name %></div>
         <div>Title:</div>
-        <div><%= game.title %></div>
+        <div><%= food.title %></div>
         <div>Description:</div>
-        <div><%= game.content %></div>
+        <div><%= food.content %></div>
         <div>Proof:</div>
-        <a href="<%= game.proof %>" target="_blank"><%= game.proof %></a>
-        <p><%= game.date %></p>
+        <a href="<%= food.proof %>" target="_blank"><%= food.proof %></a>
+        <p><%= food.date %></p>
     </section>
-    <% if (game.user[0]._id.toString() === user._id.toString()) { %>
-    <a href='/games/edit/<%= id%>'>Edit Brag</a>
+    <% if (food.user[0]._id.toString() === user._id.toString()) { %>
+    <a href='/foods/edit/<%= id%>'>Edit Brag</a>
     <% } %>
-    <a href='/games/'>Back</a>
+    <a href='/foods/'>Back</a>
     <br /><br />
     <h2>Comments:</h2>
-        <form id="add-comment-form" method="POST" action="/games/<%= game._id %>/comments">
+        <form id="add-comment-form" method="POST" action="/foods/<%= food._id %>/comments">
             <label>Comment:</label>
             <textarea name="content"></textarea>
             <label>Rating:</label>
@@ -31,7 +31,7 @@
             </select>
         <input type="submit" value="Add Comment" />
     </form>
-    <% if (game.comments.length) { %>
+    <% if (food.comments.length) { %>
       <table>
         <thead>
           <tr>
@@ -41,7 +41,7 @@
           </tr>
         </thead>
         <tbody>
-          <% game.comments.forEach(function(c) { %>
+          <% food.comments.forEach(function(c) { %>
           <tr>
             <td><%= c.createdAt.toLocaleDateString() %></td>
             <td><%= c.content %></td>

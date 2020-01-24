@@ -20,6 +20,14 @@ let bragSchema = new Schema({
       type: String,
       enum: ['Running', 'Weight Lifting', 'Hockey', 'Baseball', 'Football', 'Basketball'],
     },
+    food: {
+      type: String,
+      enum: ['Fastest Eating', 'Largest Food', 'Heaviest Food', 'Most...'],
+    },
+    sport: {
+      type: String,
+      enum: ['Longest', 'Shortest', 'Tallest', 'Heaviest', 'Oldest', 'Youngest', 'Most....'],
+    },
     title: String,
     content: String,
     proof: String,

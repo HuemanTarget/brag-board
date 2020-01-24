@@ -2,46 +2,48 @@ const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
 const session = require("express-session");
-const passport = require('passport');
+const passport = require("passport");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
-const methodOverride = require('method-override');
+const methodOverride = require("method-override");
 
-require('dotenv').config()
+require("dotenv").config();
 
-require('./config/database');
-require('./config/passport');
+require("./config/database");
+require("./config/passport");
 
-const indexRouter = require('./routes/index');
-const gamesRouter = require('./routes/games')
-const sportsRouter = require('./routes/sports')
+const indexRouter = require("./routes/index");
+const gamesRouter = require("./routes/games");
+const sportsRouter = require("./routes/sports");
+const foodsRouter = require("./routes/foods");
 // const usersRouter = require("./routes/users");
 
 const app = express();
 
-
-
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
-app.use(methodOverride('_method'));
+app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({
-  secret: 'WyldStallions!',
-  resave: false,
-  saveUninitialized: true
-}));
+app.use(
+  session({
+    secret: "WyldStallions!",
+    resave: false,
+    saveUninitialized: true
+  })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use('/games', gamesRouter)
-app.use('/sports', sportsRouter)
+app.use("/games", gamesRouter);
+app.use("/sports", sportsRouter);
+app.use("/foods", foodsRouter);
 // app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler

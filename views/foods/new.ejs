@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<%- include('../partials/sidebar') %>
+
+    <form id="new-form" action="/foods" method="POST" >
+        <label>Game:</label>
+        <select name="food">
+            <option value="Fastest Eating">Fastest Eating</option>
+            <option value="Largest Food">Largest Food</option>
+            <option value="Heaviest Food">Heaviest Food</option>
+            <option value="Most...">Most...</option>
+          </select>
+        <label>Title:</label>
+        <input type="text" name="title">
+        <label>Description:</label>
+        <textarea name="content"></textarea>
+        <label>Proof:</label>
+        <input type="url" name="proof">
+        <input type="submit" value="Add Brag">
+      </form>
+      <a class="newback" href="/foods">Back</a>
+  </body>
+</html>

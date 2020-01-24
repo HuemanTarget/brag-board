@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<%- include('../partials/sidebar') %>
+
+<div class="gamemain">
+    <h1><%= title %></h1>
+    <h2><a href="/foods/new/">Create A Brag</a></h2>
+    <% foods.forEach(f => { %>
+      <li>
+          <tr> 
+          <td><h2><%= f.food %></h2></td>
+          <td><h2><a href="/foods/<%= f._id %>"><%= f.title %></a></h2></td>
+          <td><p><%= f.content %></p></td>
+          <p><%= f.date %></p>
+          <% if (f.user.toString() === user._id.toString()) { %>
+          <form action="/foods/<%= f._id %>?_method=DELETE" method="POST" class="delete-form"><button type="submit">Delete Brag</button></form>
+          <% } %>
+          </tr>
+      </li>
+      <% }) %>
+  </div>
+</body>
+</html>
