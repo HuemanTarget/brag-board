@@ -5,13 +5,13 @@
 ```
 SCREENSHOTS:
 ```
-![ScreenShot](https://imgur.com/gPUMV74)
+![ScreenShot](./assets/bragboard_home.png)
 
-![ScreenShot](https://imgur.com/VTBLm0y)
+![ScreenShot](./assets/bragboard_index.png)
 
-![ScreenShot](https://imgur.com/JCus4cG)
+![ScreenShot](./assets/bragboard_show.png)
 
-![ScreenShot](https://imgur.com/32A7fX9)
+![ScreenShot](./assets/bragboard_edit.png)
 
 
 ```
@@ -40,6 +40,7 @@ FUTURE ENHANCEMENTS:
 * Jazzed up CSS
 * Shame Bin
 * More categories and more options
+* Allow users to create their own categories and options
 * User name attached to comments
 * Add the amounts of likes and comments to the front of a Brag
-* Add the amounts of likes and comments to the front of a Brag
+* Add Brag search ability based on option, category, comments
