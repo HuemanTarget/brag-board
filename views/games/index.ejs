@@ -1,15 +1,9 @@
 <%- include('../partials/header') %>
 <%- include('../partials/sidebar') %>
-    <div class="sidenav">
-      <a href="../">Home</a>
-      <a href="/games/new/">Create A Brag</a>
-      <a href="#Sports">Sports</a>
-      <a href="#FoodAndDrink">Food And Drink</a>
-      <a href="#HumanBody">Human Body</a>
-      <a href="#contact">Contact</a>
-    </div>
+    
     <div class="gamemain">
       <h1><%= title %></h1>
+      <a href="/games/new/">Create A Brag</a>
       <% games.forEach(g => { %>
         <li>
             <tr> 

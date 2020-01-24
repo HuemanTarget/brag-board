@@ -1,51 +1,51 @@
-const Game = require('../model/brag')
+const Sport = require('../model/brag')
 const User = require('../model/user')
 
 const index = (req, res) => {
-  Game.find({}, async (err, games) => {
+  Sport.find({}, async (err, sports) => {
     if(err){
-      return res.redirect('/games/new')
+      return res.redirect('/sports/new')
     } 
     else{
-      const sortedGames = games.sort((a, b) => (a.date > b.date) ? 1 : -1)
-    res.render('games/index', { 
-      title: 'All Game Brags', 
+      const sortedSports = sports.sort((a, b) => (a.date > b.date) ? 1 : -1)
+    res.render('sports/index', { 
+      title: 'All Sport Brags', 
       user: req.user,
-      games
+      sports
     })
   }
   })
 }
 
 const show = (req, res) => {
-    Game.findById(req.params.id)
+    Sport.findById(req.params.id)
     .populate('user')
-    .exec((err, game) => {
-        console.log(game)
-    res.render('games/show', {
-    title: 'Game Brag Detail',
+    .exec((err, sport) => {
+        console.log(sport)
+    res.render('sports/show', {
+    title: 'Sport Brag Detail',
     id: req.params.id,
     user: req.user,
-    game,
+    sport,
         })
     })
 }
 
 
 const newBrag = (req, res) => {
-  res.render('games/new', { 
-    title: 'Add Game Brag',
+  res.render('sports/new', { 
+    title: 'Add Sport Brag',
     user: req.user,
   })
 }
 
 const deleteBrag = (req, res) =>{
-    Game.findByIdAndDelete({_id:req.params.id}, (err, game)=>{
+    Sport.findByIdAndDelete({_id:req.params.id}, (err, sport)=>{
         if(err){
-            return res.redirect('/games')
+            return res.redirect('/sports')
         } 
         else{
-            res.redirect('/games');
+            res.redirect('/sports');
              
         }
     })
@@ -59,12 +59,12 @@ const create = (req, res) => {
             if (req.body[key] === '') delete req.body[key]
         }
         console.log(req.body)
-        let game = await new Game(req.body)
-        user.brags.push(game)
+        let sport = await new Sport(req.body)
+        user.brags.push(sport)
         await user.save()
-        game.user.push(user)
-        await game.save()
-        res.redirect(`/games`)
+        sport.user.push(user)
+        await sport.save()
+        res.redirect(`/sports`)
     })
 
 
@@ -73,23 +73,23 @@ const create = (req, res) => {
 
 
 const edit = (req, res) => {
-    Game.findById(req.params.id, (err, game) => {
-        res.render('games/edit',{
+    Sport.findById(req.params.id, (err, sport) => {
+        res.render('sports/edit',{
             id: req.params.id,
             user: req.user,
-            game,
+            sport,
         })
     })
 }
 
 const update = (req, res) => {
-    Game.findByIdAndUpdate(req.params.id, req.body, (err, result) => {
+    Sport.findByIdAndUpdate(req.params.id, req.body, (err, result) => {
 
             if(err){
                 console.log(err);
             }
             console.log("RESULT: " + result);
-            res.redirect('/games/');
+            res.redirect('/sports/');
         });
     };
 

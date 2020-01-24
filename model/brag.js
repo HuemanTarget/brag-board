@@ -16,6 +16,10 @@ let bragSchema = new Schema({
       type: String,
       enum: ['Call Of Duty', 'Destiny', 'Fortnite', 'Halo'],
     },
+    sport: {
+      type: String,
+      enum: ['Running', 'Weight Lifting', 'Hockey', 'Baseball', 'Football', 'Basketball'],
+    },
     title: String,
     content: String,
     proof: String,

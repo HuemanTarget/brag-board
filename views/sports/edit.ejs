@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<%- include('../partials/sidebar') %>
+<body>
+    <h1>Edit Brag</h1>
+    <form id="edit" action="/sports/edit/<%= id %>?_method=PUT" method="POST" autocomplete="off">
+        <label>Sport:</label>
+            <select name="sport">
+                <option value="Running">Running</option>
+                <option value="Weight Lifting">Weight Lifting</option>
+                <option value="Hockey">Hockey</option>
+                <option value="Baseball">Halo</option>
+                <option value="Football">Football</option>
+                <option value="Basketball">Basketball</option>
+            </select><br>
+        <label>Title:</label>
+        <input type="text" name="title" value="<%= sport.title %>"/><br>
+        <label>Content:</label>
+        <textarea name="content"><%= sport.content %></textarea><br>
+        <label>Proof:</label>
+        <input type="url" name="proof" value="<%= game.proof %>"/><br>
+        <button type="submit">Update Brag</button><br>
+    </form>
+    <a href="/sports/<%= id%>">Back</a>
+</body>
+
+

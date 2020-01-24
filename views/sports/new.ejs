@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+<%- include('../partials/sidebar') %>
+
+    <form id="new-form" action="/sports" method="POST" >
+        <label>Game:</label>
+        <select name="sport">
+            <option value="Running">Running</option>
+            <option value="Weight Lifting">Weight Lifting</option>
+            <option value="Hockey">Hockey</option>
+            <option value="Baseball">Baseball</option>
+            <option value="Football">Football</option>
+            <option value="Basketball">Basketball</option>
+          </select>
+        <label>Title:</label>
+        <input type="text" name="title">
+        <label>Description:</label>
+        <textarea name="content"></textarea>
+        <label>Proof:</label>
+        <input type="url" name="proof">
+        <input type="submit" value="Add Brag">
+      </form>
+      <a class="newback" href="/sports">Back</a>
+  </body>
+</html>
