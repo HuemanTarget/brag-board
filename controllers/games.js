@@ -2,7 +2,7 @@ const Game = require('../model/brag')
 const User = require('../model/user')
 
 const index = (req, res) => {
-  Game.find({game}, async (err, games) => {
+  Game.find({game: 'Call Of Duty', game: 'Destiny', game: 'Fortnite', game: 'Halo', }, async (err, games) => {
     if(err){
       return res.redirect('/games/new')
     } 
