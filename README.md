@@ -5,11 +5,13 @@
 ```
 SCREENSHOTS:
 ```
-![Screenshot 01](./assets/screenshots/Blackjack_ss01.png)
+![Screenshot 1](https://imgur.com/gPUMV74)
 
-![Screenshot 02](./assets/screenshots/Blackjack_ss02.png)
+![Screenshot 02](https://imgur.com/VTBLm0y)
 
-![Screenshot 03](./assets/screenshots/Blackjack_ss03.png)
+![Screenshot 03](https://imgur.com/JCus4cG)
+
+![Screenshot 03](https://imgur.com/32A7fX9)
 
 
 ```
