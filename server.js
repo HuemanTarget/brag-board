@@ -16,6 +16,7 @@ const indexRouter = require("./routes/index");
 const gamesRouter = require("./routes/games");
 const sportsRouter = require("./routes/sports");
 const foodsRouter = require("./routes/foods");
+const bodysRouter = require("./routes/bodys");
 // const usersRouter = require("./routes/users");
 
 const app = express();
@@ -44,6 +45,7 @@ app.use("/", indexRouter);
 app.use("/games", gamesRouter);
 app.use("/sports", sportsRouter);
 app.use("/foods", foodsRouter);
+app.use("/bodys", bodysRouter);
 // app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler

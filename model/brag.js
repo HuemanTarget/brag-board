@@ -24,7 +24,7 @@ let bragSchema = new Schema({
       type: String,
       enum: ['Fastest Eating', 'Largest Food', 'Heaviest Food', 'Most...'],
     },
-    sport: {
+    body: {
       type: String,
       enum: ['Longest', 'Shortest', 'Tallest', 'Heaviest', 'Oldest', 'Youngest', 'Most....'],
     },

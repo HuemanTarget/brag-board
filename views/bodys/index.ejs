@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<%- include('../partials/sidebar') %>
+    
+    <div class="gamemain">
+      <h1><%= title %></h1>
+      <h3><a href="/bodys/new/">Create A Brag</a></h3>
+      <% bodys.forEach(b => { %>
+        <li>
+            <tr> 
+            <td><h2><%= b.body %></h2></td>
+            <td><h2><a href="/bodys/<%= b._id %>"><%= b.title %></a></h2></td>
+            <td><p><%= b.content %></p></td>
+            <p><%= b.date %></p>
+            <% if (b.user.toString() === user._id.toString()) { %>
+            <form action="/bodys/<%= b._id %>?_method=DELETE" method="POST" class="delete-form"><button type="submit">Delete Brag</button></form>
+            <% } %>
+            </tr>
+        </li>
+        <% }) %>
+    </div>
+  </body>
+</html>

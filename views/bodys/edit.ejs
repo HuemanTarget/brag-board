@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+<%- include('../partials/sidebar') %>
+<body>
+    <h1>Edit Brag</h1>
+    <form id="edit" action="/bodys/edit/<%= id %>?_method=PUT" method="POST" autocomplete="off">
+        <label>Human Body:</label>
+            <select name="body">
+                <option value="Longest">Longest</option>
+                <option value="Shortest">Shortest</option>
+                <option value="Tallest">Tallest</option>
+                <option value="Heaviest">Heaviest</option>
+                <option value="Oldest">Oldest</option>
+                <option value="Youngest">Youngest</option>
+                <option value="Most....">Most....</option>
+            </select><br>
+        <label>Title:</label>
+        <input type="text" name="title" value="<%= body.title %>"/><br>
+        <label>Content:</label>
+        <textarea name="content"><%= body.content %></textarea><br>
+        <label>Proof:</label>
+        <input type="url" name="proof" value="<%= body.proof %>"/><br>
+        <button type="submit">Update Brag</button><br>
+    </form>
+    <a href="/bodys/<%= id%>">Back</a>
+</body>
+
+

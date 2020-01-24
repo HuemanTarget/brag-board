@@ -1,0 +1,56 @@
+<%- include('../partials/header') %>
+<%- include('../partials/sidebar') %>
+    <section id="show-page">
+        <div>Human Body:</div>
+        <div><%= body.body %></div>
+        <div>User:</div>
+        <div><%= body.user[0].name %></div>
+        <div>Title:</div>
+        <div><%= body.title %></div>
+        <div>Description:</div>
+        <div><%= body.content %></div>
+        <div>Proof:</div>
+        <a href="<%= body.proof %>" target="_blank"><%= body.proof %></a>
+        <p><%= body.date %></p>
+    </section>
+    <% if (body.user[0]._id.toString() === user._id.toString()) { %>
+    <a href='/bodys/edit/<%= id%>'>Edit Brag</a>
+    <% } %>
+    <a href='/bodys/'>Back</a>
+    <br /><br />
+    <h2>Comments:</h2>
+        <form id="add-comment-form" method="POST" action="/bodys/<%= body._id %>/comments">
+            <label>Comment:</label>
+            <textarea name="content"></textarea>
+            <label>Rating:</label>
+            <select name="rating">
+                <option value="Awesome Job!">Awesome Job!</option>
+                <option value="Keep It Up!">Keep It Up!</option>
+                <option value="I Can Do Better!">I Can Do Better!</option>
+                <option value="SHAME!">SHAME!</option>
+            </select>
+        <input type="submit" value="Add Comment" />
+    </form>
+    <% if (body.comments.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Comments</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% body.comments.forEach(function(c) { %>
+          <tr>
+            <td><%= c.createdAt.toLocaleDateString() %></td>
+            <td><%= c.content %></td>
+            <td><%= c.rating %></td> 
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <% } else { %>
+      <h5>No Comments Yet</h5>
+      <% } %>      
+</body>
