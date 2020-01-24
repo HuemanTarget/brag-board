@@ -5,13 +5,13 @@
 ```
 SCREENSHOTS:
 ```
-![ScreenShot](./assets/bragboard_home.png)
+![Home](https://i.imgur.com/POp3toq.png)
 
-![ScreenShot](./assets/bragboard_index.png)
+![Brag Index](https://i.imgur.com/1n6Y1Fq.png)
 
-![ScreenShot](./assets/bragboard_show.png)
+![Brag Show](https://i.imgur.com/P4ejq04.png)
 
-![ScreenShot](./assets/bragboard_edit.png)
+![Brag Edit](https://i.imgur.com/uJIchoX.png)
 
 
 ```
