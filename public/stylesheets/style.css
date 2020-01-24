@@ -1,5 +1,5 @@
 * {
-  font-family: 'Fredericka the Great', cursive, sans-serif;
+  font-family: 'Fredericka the Great', sans-serif;
 }
 
 
@@ -178,6 +178,10 @@ table td {
 }
 
 .login {
+  text-align: center;
+}
+
+.indextitle {
   text-align: center;
 }
 
