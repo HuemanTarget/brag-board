@@ -2,7 +2,7 @@ const Sport = require('../model/brag')
 const User = require('../model/user')
 
 const index = (req, res) => {
-  Sport.find({}, async (err, sports) => {
+  Sport.find({sport: { $in: [ "Running", "Weight Lifting", "Hockey", "Baseball", "Football", "Basketball" ]}}, async (err, sports) => {
     if(err){
       return res.redirect('/sports/new')
     } 
